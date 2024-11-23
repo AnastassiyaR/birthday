@@ -7,11 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-<<<<<<< HEAD
-          Hello!,,,
-=======
-          Hello
->>>>>>> 000067a (create react app)
+          Hellok
         </p>
         <a
           className="App-link"
