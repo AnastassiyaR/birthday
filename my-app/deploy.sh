@@ -3,7 +3,7 @@
 # abort on errors
 set -e
 
-env PUBLIC_URL=https://github.com/AnastassiyaR/birthday.git npm run build
+env PUBLIC_URL=https://anastassiyar.github.io/birthday npm run build
 
 cd build
 
