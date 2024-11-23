@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import { StrictMode } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import MainPage from './MainPage.jsx';
+import RunningPage from './RunningPage.jsx';
+import SuprisePage from './SuprisePage.jsx';
+import WorkingPage from './WorkingPage.jsx';
+import SupportPage from './SupportPage.jsx';
+import WorryingPage from './WorryingPage.jsx';
+import ProudPage from './ProudPage.jsx';
+import RealPage from './RealPage.jsx';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hellok
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <AnimatePresence>
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/running" element={<RunningPage />} />
+            <Route path="/suprise" element={<SuprisePage />} />
+            <Route path="/working" element={<WorkingPage />} />
+            <Route path="/worrying" element={<WorryingPage />} />
+            <Route path="/proud" element={<ProudPage />} />
+            <Route path="/real" element={<RealPage />} />
+            <Route path="/support" element={<SupportPage />} />
+          </Routes>
+        </AnimatePresence>
+      </Router>
     </div>
   );
 }
